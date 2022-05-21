@@ -13,6 +13,10 @@
   "author": "huess <huess@juicyarts.de>",
   "license": "MIT",
   "devDependencies": {
+    "@auto-it/all-contributors": "^10.37.0",
+    "@auto-it/conventional-commits": "^10.37.0",
+    "@auto-it/git-tag": "^10.37.0",
+    "@auto-it/jira": "^10.37.0",
     "auto": "^10.37.0"
   },
   "repository": {

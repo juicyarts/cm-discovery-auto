@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    "git-tag",
+    "all-contributors",
+    [
+      "conventional-commits",
+      {
+        "preset": "angular"
+      }
+    ],
+    "jira",
+    "released"
+  ],
+  "owner": "juicyarts",
+  "repo": "cm-discovery-auto",
+  "name": "huess",
+  "email": "huess@juicyarts.de",
+  "onlyPublishWithReleaseLabel": true
+}
