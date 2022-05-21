@@ -1,0 +1,22 @@
+{
+  "name": "@juicyarts/cm-discovery-auto",
+  "version": "0.0.1",
+  "description": "change management discovery with auto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "auto",
+    "change-management"
+  ],
+  "author": "huess <huess@juicyarts.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "auto": "^10.37.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juicyarts/cm-discovery-auto"
+  }
+}
