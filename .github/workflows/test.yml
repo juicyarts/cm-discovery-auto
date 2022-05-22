@@ -1,11 +1,10 @@
-name: Test
+name: Lint And Test
 
 on: [push]
 
 jobs:
-  release:
+  lintAndTest:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
     permissions:
       contents: read
       issues: read
@@ -32,7 +31,19 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install dependencies
         run: pnpm install
-
+      - name: Save Code Linting Report JSON
+        run: pnpm run lint:ci
+        continue-on-error: true
+      - name: Annotate Code Linting Results
+        uses: ataylorme/eslint-annotate-action@1.2.0
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          report-json: 'reports/eslint_report.json'
+      - name: Upload ESLint report
+        uses: actions/upload-artifact@v2
+        with:
+          name: eslint_report.json
+          path: 'reports/eslint_report.json'
       - name: Test
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
