@@ -1,3 +1,19 @@
+# v0.2.0 (Sun May 22 2022)
+
+#### 🚀 Enhancement
+
+- Feature(4-hello): Foo [#5](https://github.com/juicyarts/cm-discovery-auto/pull/5) ([@juicyarts](https://github.com/juicyarts))
+
+#### 🐛 Bug Fix
+
+- fix(2-test): fix relevant things [#3](https://github.com/juicyarts/cm-discovery-auto/pull/3) ([@juicyarts](https://github.com/juicyarts))
+
+#### Authors: 1
+
+- Huess ([@juicyarts](https://github.com/juicyarts))
+
+---
+
 # v0.1.0 (Sun May 22 2022)
 
 #### 🚀 Enhancement
