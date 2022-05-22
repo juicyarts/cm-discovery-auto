@@ -9,6 +9,18 @@
   "imageSize": 100,
   "commit": true,
   "commitConvention": "angular",
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "juicyarts",
+      "name": "Huess",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1132937?v=4",
+      "profile": "http://juicyarts.de/",
+      "contributions": [
+        "doc",
+        "infra",
+        "code"
+      ]
+    }
+  ],
   "contributorsPerLine": 7
 }
