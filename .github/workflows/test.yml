@@ -37,7 +37,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pnpm run test
+          pnpm run test:ci
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1.36
         if: always()
