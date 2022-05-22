@@ -1,0 +1,38 @@
+name: Release
+
+on: [push]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Prepare repository
+        run: git fetch --unshallow --tags
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.32.2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@juicyarts'
+      - name: setup pnpm config
+        run: |
+          pnpm config set store-dir $PNPM_CACHE_FOLDER
+          pnpm config set "//npm.pkg.github.com/:_authToken" "${NODE_AUTH_TOKEN}"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Create Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pnpm install
+          pnpm auto shipit
