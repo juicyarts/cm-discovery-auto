@@ -1,0 +1,56 @@
+name: Lint And Test
+
+on: [push]
+
+jobs:
+  lintAndTest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: read
+      checks: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v2
+      - name: Prepare repository
+        run: git fetch --unshallow --tags
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.32.2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.2'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@juicyarts'
+      - name: setup pnpm config
+        run: |
+          pnpm config set store-dir $PNPM_CACHE_FOLDER
+          pnpm config set "//npm.pkg.github.com/:_authToken" "${NODE_AUTH_TOKEN}"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies
+        run: pnpm install
+      - name: Save Code Linting Report JSON
+        run: pnpm run lint:ci
+        continue-on-error: true
+      - name: Annotate Code Linting Results
+        uses: ataylorme/eslint-annotate-action@1.2.0
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          report-json: 'reports/eslint_report.json'
+      - name: Upload ESLint report
+        uses: actions/upload-artifact@v2
+        with:
+          name: eslint_report.json
+          path: 'reports/eslint_report.json'
+      - name: Test
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pnpm run test:ci
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1.36
+        if: always()
+        with:
+          files: 'reports/**/*.xml'

@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "description": "change management discovery with auto",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test",
+    "lint": "eslint src --format stylish",
+    "lint:ci": "eslint --output-file ./reports/eslint_report.json --format json src",
+    "test:ci": "node --test | ./node_modules/tap-junit/bin/tap-junit --output ./reports/test-results"
   },
   "keywords": [
     "auto",
@@ -17,7 +21,11 @@
     "@auto-it/conventional-commits": "^10.37.0",
     "@auto-it/git-tag": "^10.37.0",
     "@auto-it/jira": "^10.37.0",
-    "auto": "^10.37.0"
+    "auto": "^10.37.0",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "tap-junit": "^5.0.2"
   },
   "repository": {
     "type": "git",
