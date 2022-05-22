@@ -1,7 +1,8 @@
 import test from 'node:test';
+
 import { strict as assert } from 'node:assert';
-import { Hello } from '../src/hello.js';
+import { Hello } from '../src/hello';
 
 test('Hello', () => {
-  assert.strictEqual(Hello('Wrld'), 'Hello World');
+  assert.strictEqual(Hello('World'), 'Hello World');
 });
