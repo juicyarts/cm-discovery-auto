@@ -1,3 +1,24 @@
+# v2.0.0 (Thu May 26 2022)
+
+#### 💥 Breaking Change
+
+- Feature(JUI-17): eval npm test [#16](https://github.com/juicyarts/cm-discovery-auto/pull/16) (yildiz.h@eppendorf.de [@juicyarts](https://github.com/juicyarts))
+
+#### 🚀 Enhancement
+
+- Update .autorc [#17](https://github.com/juicyarts/cm-discovery-auto/pull/17) ([@juicyarts](https://github.com/juicyarts))
+
+#### ⚠️ Pushed to `main`
+
+- Update package.json ([@juicyarts](https://github.com/juicyarts))
+
+#### Authors: 2
+
+- Huess ([@juicyarts](https://github.com/juicyarts))
+- huess (yildiz.h@eppendorf.de)
+
+---
+
 # v1.1.0 (Thu May 26 2022)
 
 #### 🚀 Enhancement
