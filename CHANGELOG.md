@@ -1,3 +1,16 @@
+# v1.0.1 (Thu May 26 2022)
+
+#### 🐛 Bug Fix
+
+- feat(#6): testing auto with labels [#11](https://github.com/juicyarts/cm-discovery-auto/pull/11) (yildiz.h@eppendorf.de [@juicyarts](https://github.com/juicyarts))
+
+#### Authors: 2
+
+- Huess ([@juicyarts](https://github.com/juicyarts))
+- huess (yildiz.h@eppendorf.de)
+
+---
+
 # v1.0.0 (Thu May 26 2022)
 
 #### 💥 Breaking Change
