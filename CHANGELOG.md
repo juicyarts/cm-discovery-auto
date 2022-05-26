@@ -1,3 +1,20 @@
+# v1.1.0 (Thu May 26 2022)
+
+#### 🚀 Enhancement
+
+- feat(this is a feature): it does things [#13](https://github.com/juicyarts/cm-discovery-auto/pull/13) (yildiz.h@eppendorf.de [@juicyarts](https://github.com/juicyarts))
+
+#### 📝 Documentation
+
+- docs(usage): further usage testing [#12](https://github.com/juicyarts/cm-discovery-auto/pull/12) (yildiz.h@eppendorf.de [@juicyarts](https://github.com/juicyarts))
+
+#### Authors: 2
+
+- Huess ([@juicyarts](https://github.com/juicyarts))
+- huess (yildiz.h@eppendorf.de)
+
+---
+
 # v1.0.1 (Thu May 26 2022)
 
 #### 🐛 Bug Fix
