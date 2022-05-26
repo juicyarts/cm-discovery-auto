@@ -3,15 +3,27 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
- ## setup process
+## Why
 
-- Setup was done following this [guide](https://intuit.github.io/auto/docs/welcome/getting-started)
+Currently we have a lot of inconsistency in versioning, release and changelog management throughout applications and libraries. Partly there is no reasonable versioning in place and changelogs hardly exist, mostly being manually
+
+Auto automates release by using github/gitlab labels. It offers an api to manually handle things or you can use the [shipit](https://intuit.github.io/auto/docs/generated/shipit) command to let auto guess what kind of updates would be most appropriate according to your changes.
+
+You can see the basic steps auto handles in their short [Workflow](https://intuit.github.io/auto/docs#workflow) description. To have a more in depth overview on the actual release flow have a look [here](https://intuit.github.io/auto/docs/generated/shipit#release-pipeline).
+
+## Setup
+
+Follow this [guide](https://intuit.github.io/auto/docs/welcome/getting-started).
+
+## Usage
+
+Create a new branch, apply your changes and commit using [conventional commit](<https://intuit.github.io/auto/docs/generated/conventional-commits>).
 
 ## Observations
 
 ### opinionated about the package manager
 
-When initializing one needs to chose a package manager for the project. For Libraries in our ecosystem this will most probably be npm. Alternative for Applications might be Git Tags themselves.
+When initializing one needs to chose a package manager for the project. For Libraries in our ecosystem this will most probably be npm. Alternative for Applications might be Git Tags themselves. **A repository can only have one such manager**.
 
 ### various integrations provided by auto itself
 
