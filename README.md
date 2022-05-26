@@ -17,7 +17,35 @@ Follow this [guide](https://intuit.github.io/auto/docs/welcome/getting-started).
 
 ## Usage
 
-Create a new branch, apply your changes and commit using [conventional commit](<https://intuit.github.io/auto/docs/generated/conventional-commits>).
+Create a new branch, apply your changes and commit using [conventional commit](<https://intuit.github.io/auto/docs/generated/conventional-commits>). Using [commitizen](https://github.com/commitizen/cz-cli) is hardly recommended!
+
+```shell
+$ git checkout -b docs/usage-instructions
+Switched to a new branch 'docs/usage-instructions'
+```
+
+### add a feature
+
+```shell
+# add your changes
+$ git add .
+$ git cz
+cz-cli@4.2.4, cz-conventional-changelog@3.2.0
+
+? Select the type of change that you're committing: feat:     A new feature
+? What is the scope of this change (e.g. component or file name): (press enter to skip) test
+? Write a short, imperative tense description of the change (max 88 chars):
+ (41) test how a feature looks in the changelog
+? Provide a longer description of the change: (press enter to skip)
+ how does the description show up?
+? Are there any breaking changes? No
+? Does this change affect any open issues? Yes
+? Add issue references (e.g. "fix #123", "re #123".):
+ prepare #6
+[docs/usage-instructions 667234d] feat(test): test how a feature looks in the changelog
+ 1 file changed, 15 insertions(+), 3 deletions(-)
+
+```
 
 ## Observations
 
