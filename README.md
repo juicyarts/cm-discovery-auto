@@ -33,8 +33,6 @@ When you added the `release` label auto will apply the needed version bump, crea
 
 ### using with npm
 
-
-
 ----------------
 
 ## Observations

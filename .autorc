@@ -1,10 +1,7 @@
 {
   "plugins": [
     [
-      "npm",
-      {
-        "canaryScope": "canary"
-      }
+      "npm"
     ],
     "all-contributors",
     "conventional-commits",
