@@ -133,6 +133,11 @@ cz-cli@4.2.4, cz-conventional-changelog@3.2.0
  1 file changed, 20 insertions(+)
 ```
 
+## Make a Release
+
+So it seems like cc itself is not enough to make auto act. We might need to add the release tag to a pr.
+
+----------------
 
 ## Observations
 
