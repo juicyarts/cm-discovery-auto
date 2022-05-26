@@ -1,3 +1,15 @@
+# v2.1.0 (Thu May 26 2022)
+
+#### 🚀 Enhancement
+
+- docs(Release): removes explicit release [#18](https://github.com/juicyarts/cm-discovery-auto/pull/18) ([@juicyarts](https://github.com/juicyarts))
+
+#### Authors: 1
+
+- Huess ([@juicyarts](https://github.com/juicyarts))
+
+---
+
 # v2.0.0 (Thu May 26 2022)
 
 #### 💥 Breaking Change
