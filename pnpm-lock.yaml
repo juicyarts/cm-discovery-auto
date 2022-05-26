@@ -3,8 +3,8 @@ lockfileVersion: 5.4
 specifiers:
   '@auto-it/all-contributors': ^10.37.0
   '@auto-it/conventional-commits': ^10.37.0
-  '@auto-it/git-tag': ^10.37.0
   '@auto-it/jira': ^10.37.0
+  '@auto-it/npm': ^10.37.0
   auto: ^10.37.0
   eslint: ^7.32.0 || ^8.2.0
   eslint-config-airbnb-base: ^15.0.0
@@ -14,8 +14,8 @@ specifiers:
 devDependencies:
   '@auto-it/all-contributors': 10.37.0
   '@auto-it/conventional-commits': 10.37.0
-  '@auto-it/git-tag': 10.37.0
   '@auto-it/jira': 10.37.0
+  '@auto-it/npm': 10.37.0
   auto: 10.37.0
   eslint: 8.16.0
   eslint-config-airbnb-base: 15.0.0_btspkuwbqkl4adpiufzbathtpi
@@ -121,19 +121,6 @@ packages:
       - '@octokit/core'
       - encoding
       - supports-color
-    dev: true
-
-  /@auto-it/git-tag/10.37.0:
-    resolution: {integrity: sha512-x/AaESDGLRU/9K+Qs0UxMCRtxquStr6fHf2t/y6aJmScu2UK5oBud4q5i5IVAkuN4hoV3bqWUG7cgFvBEbJKeA==}
-    dependencies:
-      '@auto-it/core': 10.37.0
-      semver: 7.3.7
-      tslib: 2.1.0
-    transitivePeerDependencies:
-      - '@octokit/core'
-      - encoding
-      - supports-color
-      - typescript
     dev: true
 
   /@auto-it/jira/10.37.0:
