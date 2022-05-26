@@ -25,13 +25,8 @@ Every commit will be visible in the changelog. Links should be set up properly t
 
 ### Adding labels
 
-When you open a PR/MR you can set labels to set the appropriate type of change if you think it is worth a release add the `release` label.
+When you open a PR/MR you can set labels to set the appropriate type of change. Every pr will create a canary release to test with.
 
-### Releasing
-
-When you added the `release` label auto will apply the needed version bump, create dedicated tags and a releaase as well as the changelog containing the commits that follow the cc spec.
-
-### using with npm
 
 ----------------
 
