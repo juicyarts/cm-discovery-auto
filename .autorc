@@ -1,10 +1,13 @@
 {
   "plugins": [
-    "git-tag",
-    "all-contributors",
     [
-      "conventional-commits"
+      "npm",
+      {
+        "canaryScope": "canary"
+      }
     ],
+    "all-contributors",
+    "conventional-commits",
     "jira",
     "released"
   ],

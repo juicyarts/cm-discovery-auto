@@ -2,7 +2,7 @@
   "name": "@juicyarts/cm-discovery-auto",
   "version": "0.0.1",
   "description": "change management discovery with auto",
-  "main": "index.js",
+  "main": "src/hello.js",
   "type": "module",
   "scripts": {
     "test": "node --test",
@@ -19,7 +19,7 @@
   "devDependencies": {
     "@auto-it/all-contributors": "^10.37.0",
     "@auto-it/conventional-commits": "^10.37.0",
-    "@auto-it/git-tag": "^10.37.0",
+    "@auto-it/npm": "^10.37.0",
     "@auto-it/jira": "^10.37.0",
     "auto": "^10.37.0",
     "eslint": "^7.32.0 || ^8.2.0",
@@ -30,5 +30,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/juicyarts/cm-discovery-auto"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
