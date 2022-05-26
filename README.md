@@ -139,6 +139,8 @@ So it seems like cc itself is not enough to make auto act. We need to add the re
 
 Also it seems like reverted commits create some flakiness. Might also be related to the removal of angular formatting for cc.
 
+Test
+
 ----------------
 
 ## Observations
