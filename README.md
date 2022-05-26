@@ -94,6 +94,26 @@ cz-cli@4.2.4, cz-conventional-changelog@3.2.0
  1 file changed, 29 insertions(+)
 ```
 
+### add a style update
+
+```shell
+$ git cz
+cz-cli@4.2.4, cz-conventional-changelog@3.2.0
+
+? Select the type of change that you're committing: style:    Changes that do not affect the meaning of the code (white-
+space, formatting, missing semi-colons, etc)
+? What is the scope of this change (e.g. component or file name): (press enter to skip) test
+? Write a short, imperative tense description of the change (max 87 chars):
+ (20) doing a style update
+? Provide a longer description of the change: (press enter to skip)
+ you know what is what
+? Are there any breaking changes? No
+? Does this change affect any open issues? No
+[docs/usage-instructions 606b86e] style(test): doing a style update
+ 1 file changed, 18 insertions(+)
+```
+
+
 ## Observations
 
 ### opinionated about the package manager
