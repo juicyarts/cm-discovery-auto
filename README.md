@@ -47,6 +47,35 @@ cz-cli@4.2.4, cz-conventional-changelog@3.2.0
 
 ```
 
+### add a fix that introduces a braking change
+
+```shell
+$ git cz
+cz-cli@4.2.4, cz-conventional-changelog@3.2.0
+
+? Select the type of change that you're committing: fix:      A bug fix
+? What is the scope of this change (e.g. component or file name): (press enter to skip) test
+? Write a short, imperative tense description of the change (max 89 chars):
+ (37) test how a fix looks in the changelog
+➜  cm-discovery-auto git:(docs/usage-instructions) ✗ git cz
+cz-cli@4.2.4, cz-conventional-changelog@3.2.0
+
+? Select the type of change that you're committing: fix:      A bug fix
+? What is the scope of this change (e.g. component or file name): (press enter to skip) test
+? Write a short, imperative tense description of the change (max 89 chars):
+ (37) test how a fix looks in the changelog
+? Provide a longer description of the change: (press enter to skip)
+ how does the body of a fix look in the changelog
+? Are there any breaking changes? Yes
+? Describe the breaking changes:
+ Show how a breaking change will look in the changelog
+? Does this change affect any open issues? Yes
+? Add issue references (e.g. "fix #123", "re #123".):
+ prepare #6
+[docs/usage-instructions 03c7c84] fix(test): test how a fix looks in the changelog
+ 1 file changed, 29 insertions(+), 1 deletion(-)
+```
+
 ## Observations
 
 ### opinionated about the package manager
