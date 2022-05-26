@@ -17,9 +17,18 @@ Follow this [guide](https://intuit.github.io/auto/docs/welcome/getting-started).
 
 ## Usage
 
+### Commits
+
 Create a new branch, apply your changes and commit using [conventional commit](<https://intuit.github.io/auto/docs/generated/conventional-commits>). Using [commitizen](https://github.com/commitizen/cz-cli) is necessary key yp make this work properly!
 
-## Make a Release
+Every commit will be visible in the changelog. Links should be set up properly to have all issue relations.
+
+### Adding labels
+
+When you open a PR/MR you can set labels to set the appropriate type of version increase.
+As long as the release label is not used no tags will be set and no changelog written.
+
+### Make a Release
 
 So it seems like cc itself is not enough to make auto act. We need to add the release tag to a pr. So lets see what happens if we do other things with tags.
 
