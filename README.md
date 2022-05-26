@@ -76,6 +76,24 @@ cz-cli@4.2.4, cz-conventional-changelog@3.2.0
  1 file changed, 29 insertions(+), 1 deletion(-)
 ```
 
+### add a doc update
+
+```shell
+$ git cz
+cz-cli@4.2.4, cz-conventional-changelog@3.2.0
+
+? Select the type of change that you're committing: docs:     Documentation only changes
+? What is the scope of this change (e.g. component or file name): (press enter to skip) test
+? Write a short, imperative tense description of the change (max 88 chars):
+ (17) show a doc change
+? Provide a longer description of the change: (press enter to skip)
+ nothing more to say here
+? Are there any breaking changes? No
+? Does this change affect any open issues? No
+[docs/usage-instructions 0f6180a] docs(test): show a doc change
+ 1 file changed, 29 insertions(+)
+```
+
 ## Observations
 
 ### opinionated about the package manager
