@@ -113,6 +113,26 @@ space, formatting, missing semi-colons, etc)
  1 file changed, 18 insertions(+)
 ```
 
+### add a refactoring update
+
+```shell
+$ git cz
+cz-cli@4.2.4, cz-conventional-changelog@3.2.0
+
+? Select the type of change that you're committing: refactor: A code change that neither fixes a bug nor adds a feature
+? What is the scope of this change (e.g. component or file name): (press enter to skip) test
+? Write a short, imperative tense description of the change (max 84 chars):
+ (37) what does it do with refactoring huh?
+? Provide a longer description of the change: (press enter to skip)
+ yadayaydaya
+? Are there any breaking changes? No
+? Does this change affect any open issues? Yes
+? Add issue references (e.g. "fix #123", "re #123".):
+ prepares #6
+[docs/usage-instructions b9085e2] refactor(test): what does it do with refactoring huh?
+ 1 file changed, 20 insertions(+)
+```
+
 
 ## Observations
 
