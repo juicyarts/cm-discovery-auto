@@ -135,7 +135,9 @@ cz-cli@4.2.4, cz-conventional-changelog@3.2.0
 
 ## Make a Release
 
-So it seems like cc itself is not enough to make auto act. We might need to add the release tag to a pr.
+So it seems like cc itself is not enough to make auto act. We need to add the release tag to a pr. So lets see what happens if we do other things with tags.
+
+Also it seems like reverted commits create some flakiness. Might also be related to the removal of angular formatting for cc.
 
 ----------------
 
