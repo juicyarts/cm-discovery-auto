@@ -3,7 +3,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-## Why
+## Why ?
 
 Currently we have a lot of inconsistency in versioning, release and changelog management throughout applications and libraries. Partly there is no reasonable versioning in place and changelogs hardly exist, mostly being manually
 
@@ -17,23 +17,36 @@ Follow this [guide](https://intuit.github.io/auto/docs/welcome/getting-started).
 
 ## Usage
 
-### Commits
+There are two ways to use auto with this repo:
 
-Create a new branch, apply your changes and commit using [conventional commit](<https://intuit.github.io/auto/docs/generated/conventional-commits>), Using Conventiona Commits is necessary to make this work properly. Using [commitizen](https://github.com/commitizen/cz-cli) is highly recommended!
+1. using conventional commits (recommended)
+2. using github labels
 
-Every commit will be visible in the changelog. Links should be set up properly to have all issue relations.
+### Using Conventional Commits
 
-### Adding labels
+- Create a new branch, apply your changes and commit using [conventional commit](https://intuit.github.io/auto/docs/generated/conventional-commits). Using [commitizen](https://github.com/commitizen/cz-cli) is highly recommended!
 
-When you open a PR/MR you can set labels to set the appropriate type of change. Every pr will create a canary release to test with.
+- Push your branch to the remote and open a merge/pull request.
 
-----------------
+- if your branch contains any commit messages that make a version bump reasonable (feat, fix, breaking change) a canary release is created
+
+![canary screen](docs/canary%20screen.png)
+
+Every commit will be visible in the changelog. Links should be set up properly to have all issue relations. Depending on the scope chosen (feature/fix/breaking change) auto will guess the most appropriate version updates and apply them after merge.
+
+### Using Labels
+
+- Add one of the labels provided by auto to your pull/merge-request
+- depending on the given label auto will decide if a canary build is reasonable
+- The changelog will be created based on the labels you used
+
+--------------------------------------------------------------------------------
 
 ## Observations
 
 ### opinionated about the package manager
 
-When initializing one needs to chose a package manager for the project. For Libraries in our ecosystem this will most probably be npm. Alternative for Applications might be Git Tags themselves. **A repository can only have one such manager**.
+When using auto you need to decide for one package manager plugin. For Libraries in our ecosystem this will most probably be npm. Alternative for Applications might be git tags themselves. **A repository can only have one such manager**. Git tags cannot be used to create canary releases. That was my observation at least, might need some deeper investigation.
 
 ### various integrations provided by auto itself
 
