@@ -1,3 +1,15 @@
+# v2.1.1 (Fri May 27 2022)
+
+#### 🐛 Bug Fix
+
+- fix(readme): fixes convetional commit comment [#19](https://github.com/juicyarts/cm-discovery-auto/pull/19) ([@juicyarts](https://github.com/juicyarts))
+
+#### Authors: 1
+
+- Huess ([@juicyarts](https://github.com/juicyarts))
+
+---
+
 # v2.1.0 (Thu May 26 2022)
 
 #### 🚀 Enhancement
