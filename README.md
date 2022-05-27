@@ -19,14 +19,13 @@ Follow this [guide](https://intuit.github.io/auto/docs/welcome/getting-started).
 
 ### Commits
 
-Create a new branch, apply your changes and commit using [conventional commit](<https://intuit.github.io/auto/docs/generated/conventional-commits>). Using [commitizen](https://github.com/commitizen/cz-cli) is necessary to make this work properly!
+Create a new branch, apply your changes and commit using [conventional commit](<https://intuit.github.io/auto/docs/generated/conventional-commits>), Using Conventiona Commits is necessary to make this work properly. Using [commitizen](https://github.com/commitizen/cz-cli) is highly recommended!
 
 Every commit will be visible in the changelog. Links should be set up properly to have all issue relations.
 
 ### Adding labels
 
 When you open a PR/MR you can set labels to set the appropriate type of change. Every pr will create a canary release to test with.
-
 
 ----------------
 
