@@ -1,3 +1,15 @@
+# v3.0.0 (Fri May 27 2022)
+
+#### 💥 Breaking Change
+
+- feat(#6): finalize docs [#20](https://github.com/juicyarts/cm-discovery-auto/pull/20) ([@juicyarts](https://github.com/juicyarts))
+
+#### Authors: 1
+
+- Huess ([@juicyarts](https://github.com/juicyarts))
+
+---
+
 # v2.1.1 (Fri May 27 2022)
 
 #### 🐛 Bug Fix
