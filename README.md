@@ -5,15 +5,17 @@
 
 ## Why ?
 
-Currently we have a lot of inconsistency in versioning, release and changelog management throughout applications and libraries. Partly there is no reasonable versioning in place and changelogs hardly exist, mostly being manually
+Currently we have a lot of inconsistencies in versioning, releasing and managing changelogs across applications and libraries. Partly there is no reasonable versioning in place and changelogs hardly exist, mostly being manually created and managed.
 
-Auto automates release by using github/gitlab labels. It offers an api to manually handle things or you can use the [shipit](https://intuit.github.io/auto/docs/generated/shipit) command to let auto guess what kind of updates would be most appropriate according to your changes.
+Auto handles version, release and changelog management by using either github/gitlab labels or conventional commits. It offers an api to manually handle different scenarios or you can use the [shipit](https://intuit.github.io/auto/docs/generated/shipit) command to let auto guess what kind of updates would be most appropriate according to your changes.
 
 You can see the basic steps auto handles in their short [Workflow](https://intuit.github.io/auto/docs#workflow) description. To have a more in depth overview on the actual release flow have a look [here](https://intuit.github.io/auto/docs/generated/shipit#release-pipeline).
 
 ## Setup
 
-Follow this [guide](https://intuit.github.io/auto/docs/welcome/getting-started).
+If you set up a new project follow this [guide](https://intuit.github.io/auto/docs/welcome/getting-started). You can also see that we have a github action for releases in this repository. The only thing we do is calling `yarn auto shipit`. The rest is handled completely by auto.
+
+After auto is set up developers don't need to interact with it at all. Everything is handled through well formatted commit messages or github/gitlab labels.
 
 ## Usage
 
@@ -32,13 +34,28 @@ There are two ways to use auto with this repo:
 
 ![canary screen](docs/canary%20screen.png)
 
-Every commit will be visible in the changelog. Links should be set up properly to have all issue relations. Depending on the scope chosen (feature/fix/breaking change) auto will guess the most appropriate version updates and apply them after merge.
+- when your branch is merged the according version bumps are applied
+  - new package is deployed
+    - see <https://github.com/juicyarts/cm-discovery-auto/packages/1445838?version=2.1.1>
+  - new tag and release is created
+    - see  <https://github.com/juicyarts/cm-discovery-auto/releases/tag/v2.1.1>
+  - changelog is updated
+    - see <https://github.com/juicyarts/cm-discovery-auto/blob/main/CHANGELOG.md#v211-fri-may-27-2022>
+  - all related issues and and mrs receive a `released` label
+    - see <https://github.com/juicyarts/cm-discovery-auto/issues?q=is%3Aissue+is%3Aclosed>
+    - see <https://github.com/juicyarts/cm-discovery-auto/pull/19>
+  - all related mrs receive a message containing the release they were deployed with
+
+![deploy-bot](docs/release%20bot%20message.png)
+
+Every commit that follows conventional commit standards will be visible in the changelog.
 
 ### Using Labels
 
 - Add one of the labels provided by auto to your pull/merge-request
-- depending on the given label auto will decide if a canary build is reasonable
+- Depending on the given label auto will decide if a canary build is reasonable
 - The changelog will be created based on the labels you used
+- Rest is the same is above
 
 --------------------------------------------------------------------------------
 
@@ -53,11 +70,23 @@ When using auto you need to decide for one package manager plugin. For Libraries
 - list contributors
 - use conventional commits
 - first time contrib
-- jira
+- jira linking
 
-### project labels
+## pro's
 
-Uses labels in Mr/Pr or conventional commit selectors (<https://intuit.github.io/auto/docs/generated/conventional-commits>) to decide for appropriate version bump
+- easy to set up and use
+- developer's don't need to interact with auto at all
+- canary release management is built in
+- changelogs are well formatted, contain reasonable links to issues, commits, merge requests and participants
+- using auto by only setting labels is totally possible. So this can be an approach for non coders too!
+  - looking at you UI/UX
+
+## con's
+
+- could not yet find a way to remove the canary releases
+  - might open a pr here to allow regex based removal <https://github.com/actions/delete-package-versions>
+- Every change can be a version bump
+  - this is not bad per se but does not work all to well for our applications where the leading version is the product version instead of the software version. Needs to be discussed
 
 ## Contributors ✨
 
